@@ -34,6 +34,11 @@ const SkillsIcon = styled.div`
   margin: 10px 10px 0px 0px;
   font-size: 13px;
 `;
+const Image = styled.img`
+  margin-top: 15px;
+  margin-right: 18px;
+`;
+
 const Projects = (props) => {
   const [data, setData] = useState(ProjectData);
   return (
@@ -53,10 +58,12 @@ const Projects = (props) => {
                     <Text>{item.intro}</Text>
                     <Skills>
                       {item.skills &&
-                        item.skills.map((item) => (
-                          <SkillsIcon>{item}</SkillsIcon>
+                        item.skills.map((skill) => (
+                          <SkillsIcon>{skill}</SkillsIcon>
                         ))}
                     </Skills>
+                    <Image src="./images/github.svg" />
+                    <Image src="./images/external-link.svg" />
                   </ProjectIntro>
                 </ProjectBox>
               );
@@ -72,6 +79,8 @@ const Projects = (props) => {
                           <SkillsIcon>{item}</SkillsIcon>
                         ))}
                     </Skills>
+                    <Image src="./images/github.svg" />
+                    <Image src="./images/external-link.svg" />
                   </ProjectIntro>
                   <ProjectPhoto photoURL={item.photoURL} />
                 </ProjectBox>

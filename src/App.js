@@ -2,6 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import HeaderComponent from "./components/Header/Header";
 import ContentsComponent from "./components/Contents/Contents";
+import FooterComponent from "./components/Footer/Footer";
 
 const Wrapper = styled.div`
   background-color: rgba(18, 18, 18, 1);
@@ -18,6 +19,7 @@ function App() {
       <Container>
         <HeaderComponent />
         <ContentsComponent />
+        <FooterComponent />
       </Container>
     </Wrapper>
   );
