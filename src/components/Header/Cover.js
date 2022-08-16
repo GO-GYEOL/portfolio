@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: end;
 `;
+
 const Animation = styled.div`
   width: 400px;
   margin-right: 30px;

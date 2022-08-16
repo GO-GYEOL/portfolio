@@ -1,28 +1,47 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ProjectData } from "../../ProjectsData";
 
 const ProjectBox = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: #ffffffde;
+  margin-top: 15px;
+  margin-bottom:50px;
 `;
 const ProjectPhoto = styled.div`
-  width: 45%;
-  height: 250px;
+  width: 50%;
+  height: 350px;
   background-image: url(${(props) => props.photoURL});
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
   margin-bottom: 30px;
+  border-radius: 20px;
 `;
 const ProjectIntro = styled.div`
   width: 45%;
+  display: flex;
+  align-items: center;
 `;
 const Text = styled.div`
   font-size: ${(props) => props.fontSize};
   padding: ${(props) => props.padding};
+  font-weight: ${(props) => props.fontWeight};
+  ${(props) => {
+    if (props.gradient) {
+      return css`
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #8e9ffa;
+        background-image: linear-gradient(43deg, #a162e8, #f7ce68 30%, #85ffbd);
+        color: transparent;
+        -webkit-background-clip: text;
+        margin-bottom: 10px;
+      `;
+    }
+  }}
 `;
 const Skills = styled.div`
   display: flex;
@@ -43,7 +62,7 @@ const Projects = (props) => {
   const [data, setData] = useState(ProjectData);
   return (
     <>
-      <Text fontSize="20px" padding="20px 0px">
+      <Text fontSize="24px" padding="20px 0px" fontWeight="bold">
         Projects
       </Text>
       {!data
@@ -54,16 +73,18 @@ const Projects = (props) => {
                 <ProjectBox key={item.id}>
                   <ProjectPhoto photoURL={item.photoURL} />
                   <ProjectIntro>
-                    <Text>{item.title}</Text>
-                    <Text>{item.intro}</Text>
-                    <Skills>
-                      {item.skills &&
-                        item.skills.map((skill) => (
-                          <SkillsIcon>{skill}</SkillsIcon>
-                        ))}
-                    </Skills>
-                    <Image src="./images/github.svg" />
-                    <Image src="./images/external-link.svg" />
+                    <div>
+                      <Text gradient>{item.title}</Text>
+                      <Text>{item.intro}</Text>
+                      <Skills>
+                        {item.skills &&
+                          item.skills.map((skill) => (
+                            <SkillsIcon>{skill}</SkillsIcon>
+                          ))}
+                      </Skills>
+                      <Image src="./images/github.svg" />
+                      <Image src="./images/external-link.svg" />
+                    </div>
                   </ProjectIntro>
                 </ProjectBox>
               );
@@ -71,16 +92,18 @@ const Projects = (props) => {
               return (
                 <ProjectBox key={item.id}>
                   <ProjectIntro>
-                    <Text>{item.title}</Text>
-                    <Text>{item.intro}</Text>
-                    <Skills>
-                      {item.skills &&
-                        item.skills.map((item) => (
-                          <SkillsIcon>{item}</SkillsIcon>
-                        ))}
-                    </Skills>
-                    <Image src="./images/github.svg" />
-                    <Image src="./images/external-link.svg" />
+                    <div>
+                      <Text gradient>{item.title}</Text>
+                      <Text>{item.intro}</Text>
+                      <Skills>
+                        {item.skills &&
+                          item.skills.map((item) => (
+                            <SkillsIcon>{item}</SkillsIcon>
+                          ))}
+                      </Skills>
+                      <Image src="./images/github.svg" />
+                      <Image src="./images/external-link.svg" />
+                    </div>
                   </ProjectIntro>
                   <ProjectPhoto photoURL={item.photoURL} />
                 </ProjectBox>

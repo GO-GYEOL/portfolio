@@ -5,18 +5,20 @@ import SkillsAndTools from "./Skills&Tools";
 const Wrapper = styled.div`
   width: 100%;
   padding: 0 50px;
-  margin-top: 100px;
-  color: white;
+  margin-top: 150px;
+  color: #FFFFFFDE;
 `;
 
 const MoreBtn = styled.button`
-  padding: 5px 70px;
+  padding: 10px 70px;
   background-color: #1c1c1c;
   border: 1px solid gray;
   color: lightgray;
   display: block;
   margin: 48px auto;
   border-radius: 8px;
+  margin-bottom: 100px;
+  font-weight: 400;
 `;
 
 const ContentsComponent = (props) => {

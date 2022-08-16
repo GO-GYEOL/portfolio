@@ -12,12 +12,22 @@ export const ProjectData = [
   },
   {
     id: 2,
-    title: "netflix clone",
+    title: "MOVIE APP",
     photoURL:
       "https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg",
     intro:
       "넷플릭스 클론페이지를 제작해보았습니다. fetch api에 대해 공부할 수 있었으며, recoil을 통해 상태관리를 하였습니다. ",
     skills: ["React", "Recoil"],
+    githubURL: "",
+    link: "",
+  },
+  {
+    id: 3,
+    title: "Portfolio page",
+    photoURL:
+      "https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg",
+    intro: "현재 보여지고 있는 포트폴리오를 리액트를 이용해 만들었습니다. ",
+    skills: ["React"],
     githubURL: "",
     link: "",
   },
