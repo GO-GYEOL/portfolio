@@ -23,7 +23,7 @@ const Text = styled.div`
 const IconBoxWrapper = styled.div`
   display: flex;
 `;
-const IconWrapper = styled.div`
+const IconWrapper = styled.a`
   display: flex;
   border: 1px solid white;
   margin-right: 10px;
@@ -48,15 +48,16 @@ const ContactLeft = (props) => {
         Resume
       </Text>
       <IconBoxWrapper>
-        <IconWrapper>
+        <IconWrapper href="https://www.linkedin.com/feed/" target="_blank">
           <img src="./images/linkedin.svg"></img>
           <div style={{ lineHeight: "30px" }}>LinkedIn</div>
         </IconWrapper>
-        <IconWrapper>
+        <IconWrapper href="https://github.com/GO-GYEOL" target="_blank">
           <img src="./images/github.svg"></img>
           <div style={{ lineHeight: "30px" }}>Github</div>
         </IconWrapper>
       </IconBoxWrapper>
+      <img style={{ width: "100%" }} src="./images/rocket.png"></img>
     </Wrapper>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const ScrollFn = (props) => {
+const useScroll = (props) => {
   const element = useRef(null);
   const onMoveToElement = () => {
     element.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -8,4 +8,4 @@ const ScrollFn = (props) => {
   return { element, onMoveToElement };
 };
 
-export default ScrollFn;
+export default useScroll;

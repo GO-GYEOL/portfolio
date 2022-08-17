@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 const Wrapper = styled.div`
   width: 55%;
   background-color: #1c1c1c;
   border-radius: 10px;
   padding: 32px;
+  height:500px;
 `;
 
 const Input = styled.input`

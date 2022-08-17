@@ -8,7 +8,7 @@ const ProjectBox = styled.div`
   justify-content: space-between;
   color: #ffffffde;
   margin-top: 15px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 `;
 const ProjectPhoto = styled.div`
   width: 50%;
@@ -22,6 +22,7 @@ const ProjectPhoto = styled.div`
 `;
 const ProjectIntro = styled.div`
   width: 45%;
+  font-size:15px;
   display: flex;
   align-items: center;
 `;
@@ -82,8 +83,12 @@ const Projects = (props) => {
                             <SkillsIcon>{skill}</SkillsIcon>
                           ))}
                       </Skills>
-                      <Image src="./images/github.svg" />
-                      <Image src="./images/external-link.svg" />
+                      <a href={item.githubURL} target="_blank">
+                        <Image src="./images/github.svg"></Image>
+                      </a>
+                      <a href={item.link} target="_blank">
+                        <Image src="./images/external-link.svg"></Image>
+                      </a>
                     </div>
                   </ProjectIntro>
                 </ProjectBox>
@@ -101,8 +106,12 @@ const Projects = (props) => {
                             <SkillsIcon>{item}</SkillsIcon>
                           ))}
                       </Skills>
-                      <Image src="./images/github.svg" />
-                      <Image src="./images/external-link.svg" />
+                      <a href={item.githubURL} target="_blank">
+                        <Image src="./images/github.svg"></Image>
+                      </a>
+                      <a href={item.link} target="_blank">
+                        <Image src="./images/external-link.svg"></Image>
+                      </a>
                     </div>
                   </ProjectIntro>
                   <ProjectPhoto photoURL={item.photoURL} />

@@ -13,12 +13,13 @@ const SmallWrapper = styled.div`
 const Title = styled.div`
   font-size: 24px;
   padding: 0 50px;
-  margin-bottom:5px;
+  margin-bottom: 5px;
   font-weight: bold;
 `;
-const FooterComponent = (props) => {
+const FooterComponent = React.forwardRef((props, ref) => {
   return (
     <Wrapper>
+      <div ref={ref}></div>
       <Title>Contact Me</Title>
       <SmallWrapper>
         <ContactLeft />
@@ -26,6 +27,6 @@ const FooterComponent = (props) => {
       </SmallWrapper>
     </Wrapper>
   );
-};
+});
 
 export default FooterComponent;
